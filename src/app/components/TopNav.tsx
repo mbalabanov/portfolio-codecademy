@@ -1,6 +1,11 @@
 import Link from "next/link";
 
-const navItems = ["About", "Work", "Skills", "Contact"];
+const navItems = [
+  { label: "About", href: "/about" },
+  { label: "Work", href: "#work" },
+  { label: "Skills", href: "#skills" },
+  { label: "Contact", href: "#contact" },
+];
 
 export default function TopNav() {
   return (
@@ -14,12 +19,12 @@ export default function TopNav() {
         </Link>
         <ul className="flex gap-8">
           {navItems.map((item) => (
-            <li key={item}>
+            <li key={item.label}>
               <Link
-                href={`#${item.toLowerCase()}`}
+                href={item.href}
                 className="text-gray-400 hover:text-white text-sm tracking-widest uppercase transition-colors duration-200"
               >
-                {item}
+                {item.label}
               </Link>
             </li>
           ))}

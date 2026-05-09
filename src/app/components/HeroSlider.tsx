@@ -54,7 +54,7 @@ export default function HeroSlider() {
           Marin
         </h1>
         <p className="text-xl tracking-[0.3em] uppercase text-gray-300">
-          Web Developer &mdash; Athens, Greece
+          Web Developer &mdash; Thessaloniki, Greece
         </p>
       </div>
 
